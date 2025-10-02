@@ -1,4 +1,4 @@
-# 🎶 RitBeat
+# 🎶 RitBeat v1.1
 
 Um mini jogo de ritmo musical onde o jogador deve mover o **mouse** até o quadrado indicado numa grade **3x3**.  
 Cada acerto soma **1 ponto** no placar.  
@@ -31,14 +31,19 @@ Cada acerto soma **1 ponto** no placar.
 - Jogador ganha **+1 ponto** ao passar o mouse no quadrado correto.
 - Placar exibido no topo da tela.
 
-### v1.1 (em andamento 🚧)
-- Ajuste nas cores (feedback visual mais claro).
-- Ajuste no layout.
-- Ajuste na estrutura do projeto.
-- Preparando estrutura para adicionar **tempo limite**.
+## 📝 Versões / Changelog
+
+### v1.1
+- Layout centralizado e mais atrativo, com card, grid 3x3 e título destacado.
+- Estrutura do projeto organizada em `index.html`, `style.css` e `script.js`.
+- Tempo limite: timer de 30 segundos adicionado com mensagem de fim de jogo.
+- Animação "pop" nos quadrados ativos, dando efeito de crescimento quando aparecem.
+
+### v1.2 (em andamento 🚧)
+- Redesign(style) dos quadrados.
+- Sincronizar os quadrados com o beat.
 
 ### Futuras versões
-- ⏱️ Tempo limite (ex: 30 segundos).  
 - 🏆 Ranking com pontuações finais.  
 - 🎵 Sincronização com música de fundo.  
 - 🔥 Múltiplos níveis de dificuldade. 

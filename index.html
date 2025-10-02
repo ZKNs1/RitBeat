@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RitBeat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Pontos: <span id="score">0</span></h1>
-  <div class="grid" id="grid"></div>
+  <div class="container">
+    <div class="game-box">
+      <h1>🎶 RitBeat</h1>
+      <p class="score">Pontuação: <span id="score">0</span></p>
+
+      <div class="grid">
+        <!-- 9 quadrados -->
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>

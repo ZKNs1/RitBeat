@@ -67,6 +67,20 @@ h1 {
   background: #2ecc71;
 }
 
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #e74c3c; /* vermelho para destaque */
+}
+
+.game-over {
+  font-size: 1.5rem;
+  color: #4b0082;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
 /* Animação de "crescer" */
 @keyframes pop {
   0% {

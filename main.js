@@ -1,41 +1,22 @@
-const grid = document.getElementById("grid");
-const scoreDisplay = document.getElementById("score");
+const cells = document.querySelectorAll('.cell');
+const scoreEl = document.getElementById('score');
 let score = 0;
 
-// Criar as 9 células
-for (let i = 0; i < 9; i++) {
-  const cell = document.createElement("div");
-  cell.classList.add("cell");
-  grid.appendChild(cell);
-}
+function randomCell() {
+  cells.forEach(c => c.classList.remove('active', 'correct'));
+  const index = Math.floor(Math.random() * cells.length);
+  const target = cells[index];
+  target.classList.add('active');
 
-const cells = document.querySelectorAll(".cell");
-let targetIndex = -1;
-
-// Função para escolher aleatoriamente o alvo
-function newTarget() {
-  if (targetIndex >= 0) cells[targetIndex].classList.remove("target");
-
-  targetIndex = Math.floor(Math.random() * 9);
-  cells[targetIndex].classList.add("target");
-}
-
-// Checar acerto quando mouse passa por cima
-cells.forEach((cell, index) => {
-  cell.addEventListener("mouseenter", () => {
-    if (index === targetIndex) {
+  target.addEventListener('mouseenter', () => {
+    if (target.classList.contains('active')) {
       score++;
-      scoreDisplay.textContent = score;
-
-      cell.classList.remove("target");
-      cell.classList.add("hit");
-      setTimeout(() => {
-        cell.classList.remove("hit");
-        newTarget();
-      }, 300);
+      scoreEl.textContent = score;
+      target.classList.remove('active');
+      target.classList.add('correct');
+      setTimeout(randomCell, 500);
     }
-  });
-});
+  }, { once: true });
+}
 
-// Começar com um alvo
-newTarget();
+randomCell();

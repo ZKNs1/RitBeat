@@ -33,7 +33,8 @@ Cada acerto soma **1 ponto** no placar.
 
 ### v1.1 (em andamento 🚧)
 - Ajuste nas cores (feedback visual mais claro).
-- Ajuste no layout
+- Ajuste no layout.
+- Ajuste na estrutura do projeto.
 - Preparando estrutura para adicionar **tempo limite**.
 
 ### Futuras versões

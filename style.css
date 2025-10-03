@@ -24,47 +24,23 @@ body {
 .game-box {
   background: #fff;
   padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+  border-radius: 20px;
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.35);
   text-align: center;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #4b0082;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .score {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: bold;
   color: #333;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 10px;
-  justify-content: center;
-}
-
-.cell {
-  width: 100px;
-  height: 100px;
-  background: #ddd;
-  border-radius: 10px;
-  transition: background 0.2s;
-}
-
-.cell.active {
-  background: #3498db;
-  animation: pop 0.3s ease-out; /* animação quando ativa */
-}
-
-.cell.correct {
-  background: #2ecc71;
 }
 
 .timer {
@@ -79,6 +55,41 @@ h1 {
   color: #4b0082;
   font-weight: bold;
   margin-top: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 12px;
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Quadrado ativo */
+.cell.active {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  box-shadow: 0 0 15px rgba(52,152,219,0.7), 0 0 25px rgba(52,152,219,0.4);
+  animation: pop 0.3s ease-out;
+}
+
+/* Quadrado correto */
+.cell.correct {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  box-shadow: 0 0 15px rgba(46,204,113,0.7), 0 0 25px rgba(46,204,113,0.4);
 }
 
 /* Animação de "crescer" */
